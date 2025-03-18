@@ -1,0 +1,118 @@
+---
+title: "Characterizing Automobiles"
+author: "Your Name Here"
+date: "03/17/2025"
+
+format: 
+  html:  # You will quite likely want to change all but the last one, to taste
+    theme:
+        light: flatly
+        dark: darkly
+    mainfont: monospace
+    highlight-style: github
+    title-block-banner: true
+    embed-resources: true
+
+---
+
+# Setup
+
+- Setup
+
+```{r libs}
+sh <- suppressPackageStartupMessages
+sh(library(tidyverse))
+sh(library(caret))
+sh(library(fastDummies))
+sh(library(class))
+sh(library(ISLR)) # for the "Auto" dataframe
+```
+
+# Dataframe
+
+- We use the `Auto` dataframe.
+
+```{r df}
+head(Auto)
+```
+
+- It has the following variable names, which describe various attributes of automobiles.
+
+```{r df2}
+names(Auto)
+```
+
+# Multiple Regression
+
+- Run a linear regression model with `mpg` as the dependent variable and `horsepower` and `year` as features (variables).
+- Compute and comment on the RMSE.
+
+```{r regression}
+# Your code here
+```
+
+> <span style="color:red;font-weight:bold">TODO</span>: *Explain*
+
+# Feature Engineering
+
+- Create 10 features based on the `name` column.
+- Remove all rows with a missing value.
+- Ensure only `mpg` and the engineered features remain.
+- Compute and comment on the RMSE.
+
+```{r features}
+# Your code here
+```
+
+> <span style="color:red;font-weight:bold">TODO</span>: *Explain*
+
+# Classification
+
+- Use either of $K$-NN or Naive Bayes to predict whether an automobile is a `chevrolet` or a `honda`.
+- Explain your choice of technique.
+- Report on your Kappa value.
+
+```{r classification}
+# Your code here
+```
+
+> <span style="color:red;font-weight:bold">TODO</span>: *Explain*
+
+# Binary Classification
+
+- Predict whether a car is a `honda`.
+- Use model weights.
+- Display and comment on an ROC curve.
+
+```{r binary classification}
+# Your code here
+```
+
+> <span style="color:red;font-weight:bold">TODO</span>: *Explain*
+
+# Ethics
+
+- Based on your analysis, comment on the [Clean Air Act of 1970 and Ammendments of 1977](https://www.epa.gov/clean-air-act-overview/evolution-clean-air-act)
+- Discuss the civic reposibilities of data scientists for:
+    - Big Data and Human-Centered Computing
+    - Democratic Institutions
+    - Climate Change
+- Provide at least one statistical measure for each, such as a RMSE, Kappa value, or ROC curve.
+
+> <span style="color:red;font-weight:bold">TODO</span>: Big Data and Human-Centered Computing
+
+```{r big data}
+# Your code here
+```
+
+> <span style="color:red;font-weight:bold">TODO</span>: Democratic Institutions
+
+```{r democracy}
+# Your code here
+```
+
+> <span style="color:red;font-weight:bold">TODO</span>: Climate Change
+
+```{r climate}
+# Your code here
+```
